@@ -1,0 +1,23 @@
+.image-wrapper {
+    width: 100%; /* Täidab kaardi laiuse */
+    aspect-ratio: 4 / 3; /* Määrab proportsioonid (laius:kõrgus) */
+    overflow: hidden; /* Peidab üleliigse osa */
+    position: relative; /* Tagab, et pildid jäävad konteinerisse */
+}
+
+.image-wrapper img {
+    width: 100%; /* Kohandab pildi laiuse konteineri laiusele */
+    height: 100%; /* Kohandab pildi kõrguse konteineri kõrgusele */
+    object-fit: contain; /* Säilitab proportsioonid, pilt mahub raami sisse */
+    position: absolute; /* Tagab, et pilt jääb konteinerisse */
+    top: 0; /* Keskendab pildi vertikaalselt */
+    left: 0; /* Keskendab pildi horisontaalselt */
+}
+
+.card {
+    border: none; /* Eemaldab kaardi piirjooned */
+    box-shadow: none; /* Eemaldab kaardi varju */
+    padding: 0; /* Eemaldab liigsed vahed */
+    background: none; /* Eemaldab tausta */
+
+}

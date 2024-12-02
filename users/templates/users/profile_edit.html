@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Muuda profiili{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <p><h1>Muuda profiili</h1></p>
+</div>
+<div class="container">
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{user_form|crispy}}
+
+        {{profile_form|crispy}}
+        <button type="submit">Kinnita</button>
+    </form>
+</div>
+</form>
+{% endblock body %}

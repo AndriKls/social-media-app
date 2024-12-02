@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{% block title %}Väljalogimine{% endblock title %}
+
+
+{% block body %}
+
+<h1>Kas oled kindel, et soovid välja logida?</h1>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logi välja</button>
+    </form>
+    <a href="{%url 'index'%}">Tühista</a>
+
+
+
+{% endblock body %}

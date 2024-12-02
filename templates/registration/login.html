@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Logi sisse{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <p><h1>Logi sisse</h1></p>
+</div>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit">Logi sisse</button>
+    </form>
+</div>
+</form>
+<br> <br> <br>
+<div class="container">
+<a class="btn btn-secondary" href="{% url 'register' %}">Registreeri kasutaja</a>
+</div>
+{% endblock body %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Piltide lisamine{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <p><h1>Piltide lisamine</h1></p>
+</div>
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit">Lisa</button>
+    </form>
+</div>
+</form>
+
+{% endblock body %}
